@@ -21,13 +21,13 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = encodePrivatekey(err, key)
+	err = encodePrivateKey(err, key)
 
 	encodePublicKey(err, key)
 
 }
 
-func encodePrivatekey(err error, key *rsa.PrivateKey) error {
+func encodePrivateKey(err error, key *rsa.PrivateKey) error {
 	// Записываем в текстовый файл
 	privateKeyFile, err := os.Create("private.key")
 	if err != nil {
